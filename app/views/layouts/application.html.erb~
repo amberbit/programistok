@@ -3,9 +3,8 @@
 <head>
   <title><%= title %></title>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-  <%= auto_discovery_link_tag :rss, "/feed2.rss" %>
   <%= auto_discovery_link_tag :rss, "/feed.rss" %>
-
+  <%= auto_discovery_link_tag :rss, "/feed2.rss" %>
 	<%= csrf_meta_tag %>
   <%= stylesheet_link_tag    "application" %>
 	<%= stylesheet_link_tag 	 "custom" %>
