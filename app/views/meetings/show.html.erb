@@ -27,6 +27,7 @@
 		  <th>Tytuł</th>
 		  <th>Mówca</th>
 		</tr>
+
   <% @topics.each do |topic| %>
 	<tr>
 		<% if admin_signed_in? %>
@@ -40,6 +41,18 @@
 	</tr>
 	<% end %>
 	</table>
+
+        </br>
+        </br>
+
+	<% @topics.each do |topic| %>
+
+	<h3><b>Temat: </b> <%= topic.title %></h3>
+	<%= topic.content %>
+	</br>
+	</br>
+	<% end %>
+
 </p>
 
 <div id ="disqus_thread">
