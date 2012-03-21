@@ -3,8 +3,10 @@
 <head>
   <title><%= title %></title>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-  <%= auto_discovery_link_tag :rss, "/feed2.rss" %>
-  <%= auto_discovery_link_tag :rss, "/feed.rss" %>
+
+  <%= auto_discovery_link_tag(:rss, :meetings_feed) %>
+
+    <%= auto_discovery_link_tag(:rss, :stories_feed) %>
 
 	<%= csrf_meta_tag %>
   <%= stylesheet_link_tag    "application" %>
@@ -27,6 +29,8 @@
         <div id="follow" style="float:right">
         <%= link_to image_tag("facebook.png", :title=>"follow us on facebook"), "http://www.facebook.com/pages/Programistok/237808102923666", :target=>:blank %>
         <%= link_to image_tag("twitter.png", :title=>"follow us on twitter"), "http://twitter.com/Programistok", :target=>:blank %>
+        <%= link_to image_tag("rss.png", :title=>"meetings rss feed"), :meetings_feed %>
+        <%= link_to image_tag("rss.png", :title=>"stories rss feed"), :stories_feed %>
         </div>
 			</div>
 			<div class="row">

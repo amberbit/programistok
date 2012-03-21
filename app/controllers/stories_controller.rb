@@ -4,7 +4,7 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.json
 
-	before_filter :authenticate_admin!, :except => [:show, :uindex, :feed2]
+	before_filter :authenticate_admin!, :except => [:show, :uindex, :stories_feed]
 
   def index
 		@title = "Newsy"

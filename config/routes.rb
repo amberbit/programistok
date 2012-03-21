@@ -8,12 +8,12 @@ Programistok::Application.routes.draw do
   resources :stories
   root :to => 'stories#uindex'
 
-  match '/feed', :to => 'meetings#feed',
-      :as => :feed,
+  match '/meetings_feed', :to => 'meetings#meetings_feed',
+      :as => :meetings_feed,
       :defaults => { :format => 'rss' }
 
-  match '/feed2', :to => 'stories#feed2',
-      :as => :feed2,
+  match '/stories_feed', :to => 'stories#stories_feed',
+      :as => :stories_feed,
       :defaults => { :format => 'rss' }
 
 
