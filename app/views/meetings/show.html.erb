@@ -21,12 +21,11 @@
 </p>
 
 <p>
-  <b>Teamty:</b>
+  <b>Tematy:</b>
 		<table class="zebra-striped">
 		<tr>
 		  <th>Tytuł</th>
 		  <th>Mówca</th>
-		  <th>Skrót</th>
 		</tr>
   <% @topics.each do |topic| %>
 	<tr>
@@ -37,7 +36,7 @@
 		<% end %>
 
 		<td><%= topic.speaker %> [<%= link_to(topic.email, "mailto:"+topic.email) %>]</td>
-		<td><%= topic.content[0..20] %></td>
+
 	</tr>
 	<% end %>
 	</table>

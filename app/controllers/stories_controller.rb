@@ -99,7 +99,7 @@ class StoriesController < ApplicationController
     end
   end
 
-  def feed2
+  def stories_feed
     @stories = Story.all(:order => "created_at DESC", :limit => 10)
 
     respond_to do |format|

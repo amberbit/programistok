@@ -111,7 +111,7 @@ class MeetingsController < ApplicationController
     end
   end
 
-  def feed
+  def meetings_feed
     @meetings = Meeting.all(:order => "datetime DESC", :limit => 10)
 
     respond_to do |format|
